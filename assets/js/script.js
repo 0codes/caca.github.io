@@ -35,6 +35,7 @@ window.addEventListener('load', function() {
   }
 });
 
+
 // Selección de elementos
 const openMenuBtn = document.getElementById('open-menu');
 const sideMenu = document.getElementById('side-menu');
@@ -133,7 +134,7 @@ document.querySelector('.carousel').addEventListener('touchend', function(e) {
 document.querySelector('.carousel').addEventListener('mouseenter', stopAutoSlide);
 document.querySelector('.carousel').addEventListener('mouseleave', startAutoSlide);
 
-
+window.addEventListener('load', initializeCarousel);
 
 
 
