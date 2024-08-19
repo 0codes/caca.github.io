@@ -1,8 +1,39 @@
 window.addEventListener('load', function() {
-  document.querySelector('.loading-screen').style.display = 'none';
-  window.scrollTo(0, 0);
-});
+  // Muestra la pantalla de carga
+  document.querySelector('.loading-screen').style.display = 'block';
 
+  // Selecciona todas las imágenes del carrusel
+  const images = document.querySelectorAll('img[src^="../img/carrousel/"]');
+  let loadedImagesCount = 0;
+
+  // Función que se ejecuta cuando una imagen se carga
+  const imageLoaded = function() {
+    loadedImagesCount++;
+    if (loadedImagesCount === images.length) {
+      // Si todas las imágenes están cargadas, oculta la pantalla de carga
+      document.querySelector('.loading-screen').style.display = 'none';
+      window.scrollTo(0, 0);
+    }
+  };
+
+  // Añade un event listener a cada imagen
+  images.forEach(function(image) {
+    if (image.complete) {
+      // Si la imagen ya está cargada (posiblemente de la caché)
+      imageLoaded();
+    } else {
+      // Si la imagen aún no está cargada, escucha el evento 'load'
+      image.addEventListener('load', imageLoaded);
+      image.addEventListener('error', imageLoaded); // En caso de error, cuenta la imagen también
+    }
+  });
+
+  // En caso de que no haya imágenes que cargar, oculta la pantalla de carga inmediatamente
+  if (images.length === 0) {
+    document.querySelector('.loading-screen').style.display = 'none';
+    window.scrollTo(0, 0);
+  }
+});
 
 // Selección de elementos
 const openMenuBtn = document.getElementById('open-menu');
