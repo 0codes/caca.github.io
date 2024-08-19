@@ -149,7 +149,7 @@ body::-webkit-scrollbar {
 /* Responsive Styles */
 @media (max-width: 768px) {
   .header {
-      padding: 0 10%;
+      padding: 0 5%;
   }
 
   .logo img {
@@ -246,7 +246,7 @@ body::-webkit-scrollbar {
   #open-menu svg {
     height: 35px; /* Tamaño del ícono en móviles */
     width: 35px;  /* Tamaño del ícono en móviles */
-    transform: translateY(-2px); 
+    transform: translateY(2px); 
   }
   .line {
     stroke-width: 3; /* Ancho de las líneas en móviles */
@@ -1302,8 +1302,8 @@ footer {
   }
 
   .inbox-btn {
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     border: none;
     display: flex;
@@ -1322,8 +1322,7 @@ footer {
   .msg-count {
     position: absolute;
     top:8px;
-    right: 2px;
-    background-color: rgb(255, 255, 255);
+    right: 15px;
     border-radius: 50%;
     font-size: 0.6em;
     color: rgb(0, 0, 0);
@@ -1376,4 +1375,5 @@ footer {
 .wolink:hover {
   color: #ffffff;
 }
+
 
