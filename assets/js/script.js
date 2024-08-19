@@ -42,18 +42,23 @@ const sideMenu = document.getElementById('side-menu');
 const overlay = document.getElementById('overlay');
 
 // Función para abrir el menú lateral
+function openMenu() {
+    sideMenu.classList.add('open');
+    overlay.classList.add('show');
+}
+
+// Función para cerrar el menú lateral
+function closeMenu() {
+    sideMenu.classList.remove('open');
+    overlay.classList.remove('show');
+}
+
 // Event Listeners
 openMenuBtn.addEventListener('click', openMenu);
 overlay.addEventListener('click', closeMenu);
 
 let index = 0;
 let interval;
-
-// Inicializa el carrusel
-const carousel = new Carousel('.mi-carrusel', {
-    // Opciones del carrusel aquí
-    // Ejemplo: autoplay: true, loop: true, etc.
-});
 
 // Función para mostrar la diapositiva en la posición dada
 function showSlide(n) {
@@ -91,9 +96,9 @@ function prevSlide() {
     showSlide(index - 1);
 }
 
-// Configura el cambio automático de diapositivas cada 5 segundos
+// Configura el cambio automático de diapositivas cada 3 segundos
 function startAutoSlide() {
-    interval = setInterval(nextSlide, 5000); // Cambia cada 5 segundos
+    interval = setInterval(nextSlide, 5000); // Cambia cada 3 segundos
 }
 
 // Detiene el cambio automático de diapositivas
@@ -102,12 +107,8 @@ function stopAutoSlide() {
 }
 
 // Inicializa el primer slide y comienza el cambio automático
-function initializeCarousel() {
-    showSlide(index);
-    startAutoSlide();
-    // Actualiza el carrusel después de que todas las imágenes hayan sido cargadas
-    carousel.refresh();
-}
+showSlide(index);
+startAutoSlide();
 
 // Control de deslizamiento en dispositivos móviles
 let startX;
@@ -133,7 +134,6 @@ document.querySelector('.carousel').addEventListener('touchend', function(e) {
 document.querySelector('.carousel').addEventListener('mouseenter', stopAutoSlide);
 document.querySelector('.carousel').addEventListener('mouseleave', startAutoSlide);
 
-// Inicializar el carrusel después de que todas las imágenes hayan sido cargadas
 window.addEventListener('load', initializeCarousel);
 
 
