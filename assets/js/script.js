@@ -1,6 +1,19 @@
 window.addEventListener('load', function() {
-  document.querySelector('.loading-screen').style.display = 'none';
-  window.scrollTo(0, 0);
+  // Verifica que todas las hojas de estilo estén cargadas
+  let allStylesLoaded = Array.from(document.styleSheets).every(styleSheet => {
+    return styleSheet.cssRules || styleSheet.rules;
+  });
+
+  if (allStylesLoaded) {
+    // Oculta la pantalla de carga y desplaza la ventana al inicio
+    document.querySelector('.loading-screen').style.display = 'none';
+    window.scrollTo(0, 0);
+  } else {
+    // Si alguna hoja de estilo no está cargada, vuelve a comprobar después de un tiempo
+    setTimeout(function() {
+      window.dispatchEvent(new Event('load'));
+    }, 100);
+  }
 });
 
 // Selección de elementos
