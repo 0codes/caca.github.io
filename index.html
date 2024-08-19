@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Senses - Sold Out</title>
+  <title>Senses - Creatina con sabor</title>
 
   <!-- Meta etiquetas para SEO -->
   <meta name="description" content="Senses - Venimos a revolucionar la forma de tomar creatina.">
@@ -39,22 +39,22 @@
   <link rel="canonical" href="https://walletrpa.000webhostapp.com"><!--CAMBIAR LINK-->
 
   <!-- Estilos CSS (si es que se incluyen en el head) -->
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
   <!-- Favicon -->
-  <link rel="icon" href="../assets/img/logo/image (9).png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/logo/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="../assets/img/logo/apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="../assets/img/logo/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="../assets/img/logo/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="../assets/img/logo/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/logo/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="../assets/img/logo/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="../assets/img/logo/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="57x57" href="../assets/img/logo/apple-touch-icon-57x57.png">
+  <link rel="icon" href="assets/img/logo/image (9).png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/logo/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/img/logo/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/img/logo/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/img/logo/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/img/logo/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/logo/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/img/logo/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/img/logo/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/img/logo/apple-touch-icon-57x57.png">
 
   <!-- Etiquetas de scripts -->
-  <script src="../assets/js/script.js" defer></script>
+  <script src="assets/js/script.js" defer></script>
   <script src="https://kit.fontawesome.com/bf702fe415.js" crossorigin="anonymous"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -85,7 +85,7 @@
 
 <body>
   <div class="loading-screen">
-    <img src="../assets/img/logo/image (3).webp" alt="Logo" class="logo2">
+    <img src="./assets/img/logo/image (3).webp" alt="Logo" class="logo2">
   </div>
   <header class="header">
     <div class="menu-btn">
@@ -96,7 +96,7 @@
         </svg> </button>
     </div>
     <div class="logo">
-      <img src="../assets/img/logo/image (3).webp" alt="Logo">
+      <img src="./assets/img/logo/image (3).webp" alt="Logo">
     </div>
     <div class="cart">
       <button id="cart-btn">
@@ -114,34 +114,34 @@
         </div>
       </button>
       <script>
-        document.getElementById('cart-btn').addEventListener('click', function() {
-            window.location.href = '../cart/';
+        document.getElementById('cart-btn').addEventListener('click', function () {
+          window.location.href = './cart/';
         });
         function updateCartQuantity() {
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
-        const totalQuantity = cart.reduce((total, product) => total + product.quantity, 0);
-        document.getElementById('cart-quantity').textContent = totalQuantity;
-        document.getElementById('cart-quantity2').textContent = totalQuantity;
-    }
-    updateCartQuantity();
-    </script>
+          const cart = JSON.parse(localStorage.getItem('cart')) || [];
+          const totalQuantity = cart.reduce((total, product) => total + product.quantity, 0);
+          document.getElementById('cart-quantity').textContent = totalQuantity;
+          document.getElementById('cart-quantity2').textContent = totalQuantity;
+        }
+        updateCartQuantity();
+      </script>
     </div>
   </header>
 
   <!-- Menú lateral -->
   <nav id="side-menu" class="side-menu">
     <ul>
-      <a href="../">
+      <a href="#Start">
         <li>Inicio</li>
       </a>
       <br>
-      <a href="../#Products">
+      <a href="#Products">
         <li>Comprar ahora</li>
       </a>
-      <a href="../#Reviews">
+      <a href="#Reviews">
         <li>Reviews</li>
       </a>
-      <a href="../#Newsletter">
+      <a href="#Newsletter">
         <li>Newsletter</li>
       </a>
       <br>
@@ -155,11 +155,133 @@
     </ul>
   </nav>
   <div id="overlay" class="overlay"></div>
+  <div class="carousel" id="Start">
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <img src="./assets/img/carrousel/carrousel.jpg" alt="Carrousel 1">
+        <div class="carousel-caption">misma creatina, más sabor <br><a href="#Products" class="linkbuy">COMPRAR YA</a>
+        </div>
 
-  <div class="soldoutpage">
-    <h1>SOLD OUT.</h1>
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/img/carrousel/carrousel2.jpg" alt="Carrousel 2">
+        <div class="carousel-caption">sabores naturales <br><a href="#Products" class="linkbuy">COMPRAR YA</a></div>
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/img/carrousel/carrousel3.jpg" alt="Carrousel 3">
+        <div class="carousel-caption">enfocado a deportistas <br><a href="#Products" class="linkbuy">COMPRAR YA</a>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+    <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
   </div>
 
+  <!-- Contenido de la página -->
+  <h2 class="tittlesection1">Un toque a limón, Melocotón o Nada.</h2>
+  <div class="content" id="Products">
+    <div class="products">
+      <div class="item">
+        <a href="./products/senses/">
+          <div class="itemback">
+            <img src="assets/img/Products/Portada (2).png" alt="SENSES Melocotón">
+            <p><span>SENSES</span> Melocotón</p>
+          </div>
+        </a>
+      </div>
+      <div class="item">
+        <a href="./products/senses-limon/">
+          <div class="itemback">
+            <img src="assets/img/Products/Portada (3).png" alt="SENSES Limón">
+            <p><span>SENSES</span> Limón</p>
+          </div>
+        </a>
+      </div>
+      <div class="item">
+        <a href="./products/senses-mezcla/">
+          <div class="itemback">
+            <img src="assets/img/Products/Portada (N-M).png" alt="SENSES Mezcla">
+            <p><span>SENSES</span> Mezcla</p>
+          </div>
+        </a>
+      </div>
+      <div class="item">
+        <a href="./products/senses-capsulas/">
+          <div class="itemback">
+            <img src="assets/img/Products/Portada (1).png" alt="SENSES Cápsulas">
+            <p><span>SENSES</span> Cápsulas</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="content2">
+    <div class="img-left"><img src="./assets/img/home/home.png"></div>
+    <div class="text-right">
+      <h1>SENSES: LA CREATINA DEFINITIVA</h1>
+      <p>Imposible que te olvides de tomarte esta.</p>
+      <p>Senses es fresca, ligera y está buenísima</p>
+      <p>Limón, Melocotón y Proximamente más.</p>
+      <p>Sin Azucar y Vegano</p>
+      <p>Creatina compatible con un estilo de vida sano.</p>
+      <h3>SENSES VIENE PARA QUEDARSE</h3>
+    </div>
+  </div>
+
+  <h2 class="tittlesection1">AÑADE SENSES A TU ENTRENAMIENTO.</h2>
+  <p class="subtittlesection1">Mejora tu nivel de vida.</p>
+  <div class="lineimge">
+    <div class="itemimg">
+      <img src="./assets/img/home/home (3).png" alt="Imagen 1">
+      <div class="overlay2">
+        <h3>TAKE IT ANYWHERE</h3>
+      </div>
+    </div>
+    <div class="itemimg">
+      <img src="./assets/img/home/home (4).png" alt="Imagen 2">
+      <div class="overlay2">
+        <h3>DRINK IT EACH DAY</h3>
+      </div>
+    </div>
+    <div class="itemimg">
+      <img src="./assets/img/home/home (5).png" alt="Imagen 3">
+      <div class="overlay2">
+        <h3>TRAIN HARD</h3>
+      </div>
+    </div>
+    <div class="itemimg">
+      <img src="./assets/img/home/home (1).png" alt="Imagen 4">
+      <div class="overlay2">
+        <h3>LIVE HARD</h3>
+      </div>
+    </div>
+  </div>
+  <div class="testimonial-carousel" id="Reviews">
+    <div class="carousel-container">
+      <!-- Los testimonios se llenarán dinámicamente mediante JavaScript -->
+    </div>
+  </div>
+  </div>
+  <hr class="hr">
+  <div class="newsletter" id="Newsletter">
+    <svg width="41px" height="26px" viewBox="0 0 41 26" version="1.1" xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+      <title>Email</title>
+      <g transform="translate(1.500000, 1.000000)" fill="none" stroke="currentColor" stroke-width="2">
+        <polygon points="0 0 0 24 38 24 38 0"></polygon>
+        <polyline points="0 3 19 14 38 3"></polyline>
+      </g>
+    </svg>
+    <h2 class="newslettertext">REGÍSTRATE A NUESTRA NEWSLETTER</h2>
+    <div class="inputnews">
+      <input type="text" class="input" placeholder="E-mail"><button type="submit"
+        class="in-line-with-input">SUSCRÍBETE</button>
+    </div>
+    <p>Suscríbete a nuestra newsletter y recibe un descuento en tu primera compra: regístrate, recibe promociones
+      exclusivas y las últimas noticias sobre SENSES. </p>
+  </div>
+  <hr>
   <footer>
     <div class="footer">
       <div class="left">
