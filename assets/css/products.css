@@ -12,15 +12,18 @@
   align-items: center;
   z-index: 9999;
 }
+
 /* Elimina el fondo azul en iOS (Safari) */
-a, button {
-    -webkit-tap-highlight-color: transparent;
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Elimina el fondo azul en Android (Chrome, Firefox, etc.) */
-a:focus, button:focus {
-    outline: none;
-    box-shadow: none;
+a:focus,
+button:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 /* Estilo para el logo */
@@ -72,15 +75,18 @@ body::-webkit-scrollbar {
   z-index: 1000;
 }
 
-.menu-btn button, .cart button {
+.menu-btn button,
+.cart button {
   background: none;
   border: none;
   color: rgb(0, 0, 0);
   cursor: pointer;
 }
-.cart p{
+
+.cart p {
   font-size: 20px;
 }
+
 .logo img {
   height: 40px;
 }
@@ -110,12 +116,14 @@ body::-webkit-scrollbar {
   padding-left: 15px;
   cursor: pointer;
   border-radius: 15px;
-  font-size:17px;
-  transition: background-color 0.3s ease; /* Añade transición para suavizar el cambio de color */
+  font-size: 17px;
+  transition: background-color 0.3s ease;
+  /* Añade transición para suavizar el cambio de color */
 }
 
 .side-menu ul li:hover {
-  background-color: #efefefb4; /* Cambia el color de fondo al hacer hover */
+  background-color: #efefefb4;
+  /* Cambia el color de fondo al hacer hover */
 }
 
 
@@ -129,9 +137,10 @@ body::-webkit-scrollbar {
 .side-menu.open {
   left: 0;
 }
-.side-menu a{
- color: rgb(103, 103, 103);
- text-decoration: none;
+
+.side-menu a {
+  color: rgb(103, 103, 103);
+  text-decoration: none;
 }
 
 /* Capa oscura */
@@ -156,16 +165,18 @@ body::-webkit-scrollbar {
 /* Responsive Styles */
 @media (max-width: 768px) {
   .header {
-      padding: 0 5%;
+    padding: 0 5%;
   }
 
   .logo img {
-      height: 35px;
+    height: 35px;
   }
 
-  .menu-btn button, .cart button {
-      font-size: 20px;
+  .menu-btn button,
+  .cart button {
+    font-size: 20px;
   }
+
   .side-menu {
     left: -250px;
     width: 250px;
@@ -174,11 +185,12 @@ body::-webkit-scrollbar {
 
 @media (max-width: 480px) {
   .logo img {
-      height: 30px;
+    height: 30px;
   }
 
-  .menu-btn button, .cart button {
-      font-size: 18px;
+  .menu-btn button,
+  .cart button {
+    font-size: 18px;
   }
 }
 
@@ -190,13 +202,16 @@ body::-webkit-scrollbar {
 .lineBottom {
   stroke-dasharray: 40 40;
 }
+
 .lineMid {
   stroke-dasharray: 40 40;
 }
-.lineTop{
+
+.lineTop {
   opacity: 0;
-   transform: translateY(-5px);
+  transform: translateY(-5px);
 }
+
 .menu-button {
   display: inline-flex;
   align-items: center;
@@ -210,9 +225,11 @@ body::-webkit-scrollbar {
 }
 
 .menu-button svg {
-  margin-right: 0; /* Espacio entre el icono y el texto */
+  margin-right: 0;
+  /* Espacio entre el icono y el texto */
   display: block;
 }
+
 #open-menu {
   background: none;
   border: none;
@@ -221,7 +238,8 @@ body::-webkit-scrollbar {
   margin: 0;
   max-width: 20px;
 }
-.cart button{
+
+.cart button {
   max-width: 20px;
 }
 
@@ -230,47 +248,59 @@ body::-webkit-scrollbar {
 }
 
 #open-menu:hover .line {
-  stroke: #000000; /* Cambia el color al hacer hover */
+  stroke: #000000;
+  /* Cambia el color al hacer hover */
 }
 
 #open-menu:hover .lineTop {
   opacity: 1;
-  transform: translateY(8px); /* Mueve la línea superior al centro */
+  transform: translateY(8px);
+  /* Mueve la línea superior al centro */
 }
 
 #open-menu:hover .lineMid {
-  transform: translateY(6px); /* Mueve y rota la línea media */
+  transform: translateY(6px);
+  /* Mueve y rota la línea media */
 }
 
 #open-menu:hover .lineBottom {
-  transform: translateY(4px); /* Mueve y rota la línea inferior */
+  transform: translateY(4px);
+  /* Mueve y rota la línea inferior */
 }
+
 #open-menu svg {
-  transform: translateY(-6px); 
+  transform: translateY(-6px);
 }
 
 @media (max-width: 600px) {
   #open-menu svg {
-    height: 35px; /* Tamaño del ícono en móviles */
-    width: 35px;  /* Tamaño del ícono en móviles */
-    transform: translateY(2px); 
+    height: 35px;
+    /* Tamaño del ícono en móviles */
+    width: 35px;
+    /* Tamaño del ícono en móviles */
+    transform: translateY(2px);
   }
+
   .line {
-    stroke-width: 3; /* Ancho de las líneas en móviles */
+    stroke-width: 3;
+    /* Ancho de las líneas en móviles */
   }
+
   #open-menu:hover .lineTop {
     opacity: 0;
-    transform: none; /* Mueve la línea superior al centro */
+    transform: none;
+    /* Mueve la línea superior al centro */
   }
-  
+
   #open-menu:hover .lineMid {
-    transform: none; 
+    transform: none;
   }
-  
+
   #open-menu:hover .lineBottom {
-    transform: none; 
+    transform: none;
   }
 }
+
 .container {
   margin: auto;
   padding: 0 1rem;
@@ -1036,17 +1066,26 @@ nav li {
   transition: color 0.3s ease;
   letter-spacing: 0.0625rem;
 }
+
 @media (max-width: 830px) {
-  .add-to-cart, .add-to-cart-wobg {
-    padding: 0.8rem 1.5rem; /* Reduce el padding en pantallas más pequeñas */
-    font-size: 0.9rem; /* Reduce el tamaño de la fuente */
+
+  .add-to-cart,
+  .add-to-cart-wobg {
+    padding: 0.8rem 1.5rem;
+    /* Reduce el padding en pantallas más pequeñas */
+    font-size: 0.9rem;
+    /* Reduce el tamaño de la fuente */
   }
 }
 
 @media (max-width: 360px) {
-  .add-to-cart, .add-to-cart-wobg {
-    padding: 0.8rem 1.1rem; /* Reduce aún más el padding en pantallas muy pequeñas */
-    font-size: 0.8rem; /* Reduce el tamaño de la fuente aún más */
+
+  .add-to-cart,
+  .add-to-cart-wobg {
+    padding: 0.8rem 1.1rem;
+    /* Reduce aún más el padding en pantallas muy pequeñas */
+    font-size: 0.8rem;
+    /* Reduce el tamaño de la fuente aún más */
   }
 }
 
@@ -1328,7 +1367,7 @@ footer {
 
   .msg-count {
     position: absolute;
-    top:8px;
+    top: 8px;
     right: 15px;
     border-radius: 50%;
     font-size: 0.6em;
@@ -1359,10 +1398,12 @@ footer {
   .image-list {
     display: none;
   }
+
   .logo {
     display: flex;
     align-items: center;
-    margin: 0 auto; /* Centra horizontalmente dentro del espacio restante */
+    margin: 0 auto;
+    /* Centra horizontalmente dentro del espacio restante */
   }
 }
 
@@ -1383,4 +1424,43 @@ footer {
   color: #ffffff;
 }
 
+.contentpoliciesbody {
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
+.contentpolicies {
+  background: #fff;
+  padding: 20px;
+  margin: 6rem 0;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 100%;
+  text-align: left;
+}
+
+.contentpolicies h1 {
+  text-align: center;
+}
+
+.contentpolicies h2 {
+  margin-top: 1.5rem;
+  font-size: .95rem;
+  font-weight: 700;
+  color: #293b65;
+}
+
+.contentpolicies p {
+  font-size: .9rem;
+  font-weight: 300;
+  color: #293b65;
+}
+.contentpolicies a {
+ text-decoration: underline;
+}
