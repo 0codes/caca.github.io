@@ -202,7 +202,7 @@
             <h2>$15</h2>
             <div class="description">
               <p>Creatina 100% pura, monohidratada, sin sabor, sin aditivos (Salvo la gelatina proveniente de la
-                cápsula). Cada pack contiene 20 cápsulas de SENSE.</p>
+                cápsula). Cada pack contiene 20 cápsulas de SENSES.</p>
               <p>Estas cápsulas son perfectas para viajes, prisas o para evitar sentir la textura de la creatina en la
                 boca. Estas capsulas, son totalmente veganas, sin azúcar y faciles de digerir.
               </p>
@@ -256,7 +256,7 @@
   <footer>
     <div class="footer">
       <div class="left">
-        <h3>FRESHEN UP WITH SENSE</h3>
+        <h3>FRESHEN UP WITH SENSES</h3>
         <a href="../../">Home</a>
         <a href="mailto:sensescrew.contact@gmail.com">Contáctanos</a>
         <a href="../../products/senses/">Buy Senses</a>
@@ -275,8 +275,12 @@
     <hr class="hrcopy">
 
     <div class="copy">
-      © 2024 SENSE
+      ©  <span id="year"></span> SENSES
     </div>
+    <script>
+      const currentYear = new Date().getFullYear();
+      document.getElementById('year').textContent = currentYear;
+  </script>
   </footer>
   <script>
     const activeImage = document.querySelector(".product-image .active");
